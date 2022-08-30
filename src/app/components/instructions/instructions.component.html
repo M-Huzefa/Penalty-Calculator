@@ -1,0 +1,75 @@
+<!-- No Logic Just HTML -->
+
+<div class="container">
+    <h1>Penalty Calculator – Course Final Program</h1>
+    <h5>In the assignment you are expected to develop the front-end using latest Angular Application, and back-end using
+        Asp.net core RESTful APIs and SQL database.</h5>
+    <h3>Requirements</h3>
+    <ol>
+        <li>Develop a web page where users will input
+            <ul>
+                <li>Date the book is checked out.</li>
+                <li>Date the book is returned.</li>
+                <li>Country selection (At least for two countries Pakistan and UAE)</li>
+                <li>Calculate button</li>
+            </ul>
+        </li>
+        <li>The web page should display
+            <ul>
+                <li>Calculated Business Days</li>
+                <li>Calculated penalty for the inputs.</li>
+            </ul>
+        </li>
+        <li>Penalty should be calculated for BUSINESS days only between the checkout and returned days of the book. The
+            checkout and return dates are inclusive.
+            •
+            <ul>
+                <li>It should consider weekends and national holidays/religious holidays defined in tables in database
+                    for a specific country.</li>
+                <li>Note that some countries have different working days and weekends. For example, in Dubai Friday and
+                    Saturday are off days. However, in Pakistan Saturday and Sunday are off days.</li>
+                <li>Your code should not have these assumptions hardcoded but they must be in configurations. The
+                    configuration should be kept in a database table.</li>
+                <li>Do not provide a screen to edit these values in the database. Manual editing of these values is
+                    sufficient.</li>
+                <li>You should develop your own algorithm for business day count.</li>
+                <li>Do not provide a screen to edit these values in the database. Manual editing of these values is
+                    sufficient.</li>Hint: Try to use DayOfWeek enumeration of .Net for weekends.
+                <li>For UAE, there is a special tax of 8% for each penalty day.</li>
+                <li>Every request and response from the client project should be logged.</li>
+                <li>There should be a INSTRUCTIONS page of your site for users to instruct business rules of penalty
+                    system.</li>
+            </ul>
+        </li>
+        <li>A book should be returned in 10 days. Any business day after 10 days will be considered as a late day.
+            <ul>
+                <li>Each late business day will be penalized for Rs. 50 /- (or currency code of country)</li>
+                <li>The currency code and the amount are country specific.</li>
+                <li>Penalty amount should be a decimal value to accommodate for cents and fills and etc.</li>
+            </ul>
+        </li>
+        <li>Any monetary value you display on the screen should have proper formatting</li>
+    </ol>
+    <h3>Notes</h3>
+    <ul>
+        <li>Do not cheat any single piece of chunk. Plagiarism case will directly lead to disqualification from the
+            program.</li>
+        <li>Do not make OVERDESIGN. The requirements are very simple and stated above. You will not receive extra points
+            for making extra screens like login, user management, library management, book management etc. Please obey
+            the requirements.</li>
+        <li>We will grade your code by its quality. Try to use comments, exceptions, validations, coding standards, and
+            configuration parameters with readable code as much as possible. Avoid magic numbers and lengthy procedures
+            in code.</li>
+        <li>Use Object Oriented Development concepts and develop your classes with proper constructors, methods, etc.
+        </li>
+    </ul>
+    <h3>Instructions</h3>
+    <h6>Submit the following changes in git repositories:</h6>
+    <ul>
+        <li>Unit test cases screenshots showing that the calculation is correct. Please capture at least 4 possible unit
+            test cases</li>
+        <li>Screenshots of all UI workflows</li>
+        <li>Project files, including the source code</li>
+        <li>Multi execution safe database scripts</li>
+    </ul>
+</div>

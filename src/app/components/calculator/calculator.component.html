@@ -1,0 +1,81 @@
+<div class="container">
+    <h1 style="text-align: center;" class="p-4"><b>Penalty Calculator</b></h1>
+    <div class="row">
+        <div class="col-sm px-5">
+            <h2 style="text-align: center;" class="p-3"><b>InPut Values</b></h2>
+
+            <!-- ############ reactive form to get values from User ###################### -->
+
+            <form [formGroup]="Form">
+                <div>
+
+                    <!-- ########## input value ############## -->
+
+                    <div class="form-control">
+                        <label for="">CheckOut Date</label>
+                        <input type="date" name="" id="" formControlName="checkoutDate">
+                    </div>
+
+                    <!-- ########### Alerts ############# -->
+
+                    <div class="alert alert-danger d-none text-center w-75 m-auto" role="alert" id="checkoutDate">
+                        CheckOut Date is Missing
+                    </div>
+                    <div class="alert alert-danger d-none text-center w-75 m-auto" role="alert" id="cInvalid">
+                        CheckOut Date is Invalid
+                    </div>
+
+                    <!-- ########## input value ############## -->
+
+                    <div class="form-control">
+                        <label for="">Return Date</label>
+                        <input type="date" name="" id="" formControlName="returnDate">
+                    </div>
+
+                    <!-- ########### Alerts ############# -->
+                
+                    <div class="alert alert-danger d-none text-center w-75 m-auto" role="alert" id="returnDate">
+                        Return Date is Missing
+                    </div>
+                    <div class="alert alert-danger d-none text-center w-75 m-auto" role="alert" id="rInvalid">
+                        Return Date is Invalid
+                    </div>
+                    <div class="alert alert-danger d-none text-center w-75 m-auto" role="alert" id="invalid">
+                        Return Date cannot be earlier than CheckOut Date. 
+                    </div>
+
+                    <!-- ########### DropDown Menu Populated with country name from DB ############# -->
+
+                    <div class="form-control">
+                        <label for="">Select Country</label>
+                        <select name="" id="" formControlName="id">
+                            <option value="{{Country.id}}" *ngFor="let Country of country">{{Country.name}}</option>
+                        </select>
+                    </div>
+
+                    <!-- ########### Alerts ############# -->
+                    
+                    <div class="alert alert-danger d-none text-center w-75 m-auto" role="alert" id="id">
+                        Please select Your Country.
+                    </div>
+                    
+                </div>
+
+                <!-- ########### Submit Button ################ -->
+
+                <div class="btnContainer">
+                    <button type="button" (click)="submit()" class="btn btn-primary mx-3">Calculate</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- ############ Result Container Display only after successful submission ############### -->
+
+        <div class="col-sm px-5" *ngIf="success">
+            <h2 style="text-align: center;" class="p-3"><b>Results</b></h2>
+            <h4>Total Business Days from {{Form.get("checkoutDate")?.value}} to {{Form.get("returnDate")?.value}}: <b>{{result.businessDays}}</b></h4>
+            <h4><b>Total Penalty: </b>{{result.penalty}}</h4>
+        </div>
+
+    </div>
+</div>

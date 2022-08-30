@@ -1,0 +1,39 @@
+.container{
+    padding: 20px;
+}
+.container .form-control{
+    border: none;
+}
+
+label{
+    font-size: 24px;
+    padding: 0 10px 10px 0;
+    display: block;
+}
+
+input, select{
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+input:focus, select:focus{
+    box-shadow: 5px 5px 10px 3px #888888;
+    outline: none;
+}
+
+.btnContainer, .button{
+    padding: 20px 30px;
+    text-align: right;
+}
+
+.alertContainer{
+    padding-bottom: 20px;
+}
+
+h2{
+    background-image: linear-gradient(#264653, #2a9d8f);
+    color: #e9c46a;
+}
